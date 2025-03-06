@@ -809,6 +809,13 @@
             <div class="game-info">
                 <h3 id="game11-title">BALLOON</h3>
                 <button id="game11-button" onclick="openGame('BALLOON')">Open</button>
+	     </div>
+        </div>
+        <div class="game">
+            <img src="nmines.jpg" alt="NEW MINES Preview">
+            <div class="game-info">
+                <h3 id="game11-title">NEW MINES</h3>
+                <button id="game11-button" onclick="openGame('NEWMINES')">Open</button>
             </div>
         </div>
     </div>
@@ -865,6 +872,8 @@ const translations = {
         game10Title: "Football X",
 	game11Button: "Open",
         game11Title: "BALLOON",
+	game12Button: "Open",
+        game12Title: "NEW MINES",
         telegramButton: "Go to telegram (RU)",
         telegramButton2: "Go to telegram (EN)"
     },
@@ -894,6 +903,8 @@ const translations = {
         game10Button: "Открыть",
 	game11Button: "Открыть",
         game11Title: "BALLOON",
+	game12Button: "Открыть",
+        game12Title: "NEW MINES",
         telegramButton: "Перейти в телеграм (RU)",
         telegramButton2: "Перейти в телеграм (EN)"
     },
@@ -923,6 +934,8 @@ const translations = {
         game10Button: "खोलें",
 	game11Button: "खोलें",
         game11Title: "BALLOON",
+	game12Button: "खोलें",
+        game12Title: "NEW MINES",
         telegramButton: "टेलीग्राम पर जाएं (RU)",
         telegramButton2: "टेलीग्राम पर जाएं (EN)"
     },
@@ -952,6 +965,8 @@ const translations = {
         game10Button: "Abrir",
 	game11Button: "Abrir",
         game11Title: "BALLOON",
+	game12Button: "Abrir",
+        game12Title: "NEW MINES",
         telegramButton: "Ir para o Telegram (RU)",
         telegramButton2: "Ir para o Telegram (EN)"
     },
@@ -981,6 +996,8 @@ const translations = {
         game10Button: "Abrir",
 	game11Button: "Abrir",
         game11Title: "BALLOON",
+	game12Button: "Abrir",
+        game12Title: "NEW MINES",
         telegramButton: "Ir a Telegram (RU)",
         telegramButton2: "Ir a Telegram (EN)"
     },
@@ -1010,6 +1027,8 @@ const translations = {
         game10Button: "Ochish",
 	game11Button: "Ochish",
         game11Title: "BALLOON",
+	game12Button: "Ochish",
+        game12Title: "NEW MINES",
         telegramButton: "Telegramga o'tish (RU)",
         telegramButton2: "Telegramga o'tish (EN)"
     },
@@ -1039,6 +1058,8 @@ const translations = {
         game10Button: "Aç",
         game11Button: "Aç",
         game11Title: "BALLOON",
+	game12Button: "Aç",
+        game12Title: "NEW MINES",
         telegramButton: "Teleqrama keç (RU)",
         telegramButton2: "Teleqrama keç (EN)"
     },
@@ -1068,6 +1089,8 @@ const translations = {
         game10Button: "Aç",
 	game11Button: "Aç",
         game11Title: "BALLOON",
+	game12Button: "Aç",
+        game12Title: "NEW MINES",
         telegramButton: "Telegrame git (RU)",
         telegramButton2: "Telegrame git (EN)"
     },
@@ -1097,6 +1120,8 @@ const translations = {
         game10Button: "Abrir",
 	game11Button: "Abrir",
         game11Title: "BALLOON",
+	game12Button: "Abrir",
+        game12Title: "NEW MINES",
         telegramButton: "Ir para o Telegram (RU)",
         telegramButton2: "Ir para o Telegram (EN)"
     },
@@ -1126,6 +1151,8 @@ const translations = {
         game10Button: "فتح",
 	game11Button: "فتح",
         game11Title: "BALLOON",
+	game12Button: "فتح",
+        game12Title: "NEW MINES",
         telegramButton: "اذهب إلى Telegram (RU)",
         telegramButton2: "اذهب إلى Telegram (EN)"
     }
@@ -1173,6 +1200,9 @@ function changeLanguage(lang) {
 	
 	document.getElementById('game11-title').innerText = translations[lang].game11Title;
         document.getElementById('game11-button').innerText = translations[lang].game11Button;
+
+	document.getElementById('game12-title').innerText = translations[lang].game12Title;
+        document.getElementById('game12-button').innerText = translations[lang].game12Button;
         
 
         // Обновляем текст для кнопок Telegram
@@ -1551,6 +1581,10 @@ function openGame(game) {
         BALLOON: {
             ios: 'ball1/index.html',
             other: 'ball1/index.html'
+        },
+        NEWMINES: {
+            ios: 'nmines1/index.html',
+            other: 'nmines1/index.html'
         }
     };
             var url = isIOS ? links[game].ios : links[game].other;
