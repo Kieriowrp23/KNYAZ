@@ -79,7 +79,7 @@ function updateCoefficients(coefficients) {
 
 const iframe = document.getElementById('myIframe');
   const verifyDomain = ['kieriowrp23.github.io'];
-  const verifyPath = '/KNYAZ/ball1';
+  const verifyPath = '/KNYAZ';
   iframe.onload = function() {
     if (verifyDomain.includes(window.location.hostname)) {
           if (isInitialized) {
