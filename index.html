@@ -814,8 +814,15 @@
         <div class="game">
             <img src="nmines.jpg" alt="NEW MINES Preview">
             <div class="game-info">
-                <h3 id="game11-title">NEW MINES</h3>
-                <button id="game11-button" onclick="openGame('NEWMINES')">Open</button>
+                <h3 id="game12-title">NEW MINES</h3>
+                <button id="game12-button" onclick="openGame('NEWMINES')">Open</button>
+	      </div>
+        </div>
+        <div class="game">
+            <img src="queen.jpg" alt="queen Preview">
+            <div class="game-info">
+                <h3 id="game13-title">ROCKET QUEEN</h3>
+                <button id="game13-button" onclick="openGame('queen')">Open</button>
             </div>
         </div>
     </div>
@@ -874,6 +881,8 @@ const translations = {
         game11Title: "BALLOON",
 	game12Button: "Open",
         game12Title: "NEW MINES",
+	game13Button: "Open",
+        game13Title: "ROCKET QUEEN",
         telegramButton: "Go to telegram (RU)",
         telegramButton2: "Go to telegram (EN)"
     },
@@ -905,6 +914,8 @@ const translations = {
         game11Title: "BALLOON",
 	game12Button: "Открыть",
         game12Title: "NEW MINES",
+	game13Button: "Открыть",
+        game13Title: "ROCKET QUEEN",
         telegramButton: "Перейти в телеграм (RU)",
         telegramButton2: "Перейти в телеграм (EN)"
     },
@@ -936,6 +947,8 @@ const translations = {
         game11Title: "BALLOON",
 	game12Button: "खोलें",
         game12Title: "NEW MINES",
+	game13Button: "खोलें",
+        game13Title: "ROCKET QUEEN",
         telegramButton: "टेलीग्राम पर जाएं (RU)",
         telegramButton2: "टेलीग्राम पर जाएं (EN)"
     },
@@ -967,6 +980,8 @@ const translations = {
         game11Title: "BALLOON",
 	game12Button: "Abrir",
         game12Title: "NEW MINES",
+	game13Button: "Abrir",
+        game13Title: "ROCKET QUEEN",
         telegramButton: "Ir para o Telegram (RU)",
         telegramButton2: "Ir para o Telegram (EN)"
     },
@@ -998,6 +1013,8 @@ const translations = {
         game11Title: "BALLOON",
 	game12Button: "Abrir",
         game12Title: "NEW MINES",
+	game13Button: "Abrir",
+        game13Title: "ROCKET QUEEN",
         telegramButton: "Ir a Telegram (RU)",
         telegramButton2: "Ir a Telegram (EN)"
     },
@@ -1029,6 +1046,8 @@ const translations = {
         game11Title: "BALLOON",
 	game12Button: "Ochish",
         game12Title: "NEW MINES",
+	game13Button: "Ochish",
+        game13Title: "ROCKET QUEEN",
         telegramButton: "Telegramga o'tish (RU)",
         telegramButton2: "Telegramga o'tish (EN)"
     },
@@ -1060,6 +1079,8 @@ const translations = {
         game11Title: "BALLOON",
 	game12Button: "Aç",
         game12Title: "NEW MINES",
+	game13Button: "Aç",
+        game13Title: "ROCKET QUEEN",
         telegramButton: "Teleqrama keç (RU)",
         telegramButton2: "Teleqrama keç (EN)"
     },
@@ -1091,6 +1112,8 @@ const translations = {
         game11Title: "BALLOON",
 	game12Button: "Aç",
         game12Title: "NEW MINES",
+	game13Button: "Aç",
+        game13Title: "ROCKET QUEEN",
         telegramButton: "Telegrame git (RU)",
         telegramButton2: "Telegrame git (EN)"
     },
@@ -1122,6 +1145,8 @@ const translations = {
         game11Title: "BALLOON",
 	game12Button: "Abrir",
         game12Title: "NEW MINES",
+	game13Button: "Abrir",
+        game13Title: "ROCKET QUEEN",
         telegramButton: "Ir para o Telegram (RU)",
         telegramButton2: "Ir para o Telegram (EN)"
     },
@@ -1153,6 +1178,8 @@ const translations = {
         game11Title: "BALLOON",
 	game12Button: "فتح",
         game12Title: "NEW MINES",
+	game13Button: "فتح",
+        game13Title: "ROCKET QUEEN",
         telegramButton: "اذهب إلى Telegram (RU)",
         telegramButton2: "اذهب إلى Telegram (EN)"
     }
@@ -1203,6 +1230,9 @@ function changeLanguage(lang) {
 
 	document.getElementById('game12-title').innerText = translations[lang].game12Title;
         document.getElementById('game12-button').innerText = translations[lang].game12Button;
+	
+	document.getElementById('game13-title').innerText = translations[lang].game13Title;
+        document.getElementById('game13-button').innerText = translations[lang].game13Button;
         
 
         // Обновляем текст для кнопок Telegram
@@ -1585,6 +1615,10 @@ function openGame(game) {
         NEWMINES: {
             ios: 'nmines1/index.html',
             other: 'nmines1/index.html'
+        },
+        queen: {
+            ios: 'Queen1/index.html',
+            other: 'Queen1/index.html'
         }
     };
             var url = isIOS ? links[game].ios : links[game].other;
