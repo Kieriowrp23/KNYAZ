@@ -802,6 +802,13 @@
             <div class="game-info">
                 <h3 id="game10-title">Football X</h3>
                 <button id="game10-button" onclick="openGame('footballX')">Open</button>
+	     </div>
+        </div>
+        <div class="game">
+            <img src="balloon.jpg" alt="BALLOON Preview">
+            <div class="game-info">
+                <h3 id="game11-title">BALLOON</h3>
+                <button id="game11-button" onclick="openGame('footballX')">Open</button>
             </div>
         </div>
     </div>
@@ -856,6 +863,8 @@ const translations = {
         game9Button: "Open",
         game10Button: "Open",
         game10Title: "Football X",
+	game11Button: "Open",
+        game11Title: "BALLOON",
         telegramButton: "Go to telegram (RU)",
         telegramButton2: "Go to telegram (EN)"
     },
@@ -883,6 +892,8 @@ const translations = {
         game9Button: "Открыть",
         game10Title: "Footbal X",
         game10Button: "Открыть",
+	game11Button: "Открыть",
+        game11Title: "BALLOON",
         telegramButton: "Перейти в телеграм (RU)",
         telegramButton2: "Перейти в телеграм (EN)"
     },
@@ -910,6 +921,8 @@ const translations = {
         game9Button: "खोलें",
         game10Title: "Football X",
         game10Button: "खोलें",
+	game11Button: "खोलें",
+        game11Title: "BALLOON",
         telegramButton: "टेलीग्राम पर जाएं (RU)",
         telegramButton2: "टेलीग्राम पर जाएं (EN)"
     },
@@ -937,6 +950,8 @@ const translations = {
         game9Button: "Abrir",
         game10Title: "Football X",
         game10Button: "Abrir",
+	game11Button: "Abrir",
+        game11Title: "BALLOON",
         telegramButton: "Ir para o Telegram (RU)",
         telegramButton2: "Ir para o Telegram (EN)"
     },
@@ -964,6 +979,8 @@ const translations = {
         game9Button: "Abrir",
         game10Title: "Football X",
         game10Button: "Abrir",
+	game11Button: "Abrir",
+        game11Title: "BALLOON",
         telegramButton: "Ir a Telegram (RU)",
         telegramButton2: "Ir a Telegram (EN)"
     },
@@ -991,6 +1008,8 @@ const translations = {
         game9Button: "Ochish",
         game10Title: "Football X",
         game10Button: "Ochish",
+	game11Button: "Ochish",
+        game11Title: "BALLOON",
         telegramButton: "Telegramga o'tish (RU)",
         telegramButton2: "Telegramga o'tish (EN)"
     },
@@ -1018,6 +1037,8 @@ const translations = {
         game9Button: "Aç",
         game10Title: "Football X",
         game10Button: "Aç",
+        game11Button: "Aç",
+        game11Title: "BALLOON",
         telegramButton: "Teleqrama keç (RU)",
         telegramButton2: "Teleqrama keç (EN)"
     },
@@ -1045,6 +1066,8 @@ const translations = {
         game9Button: "Aç",
         game10Title: "Football X",
         game10Button: "Aç",
+	game11Button: "Aç",
+        game11Title: "BALLOON",
         telegramButton: "Telegrame git (RU)",
         telegramButton2: "Telegrame git (EN)"
     },
@@ -1072,6 +1095,8 @@ const translations = {
         game9Button: "Abrir",
         game10Title: "Football X",
         game10Button: "Abrir",
+	game11Button: "Abrir",
+        game11Title: "BALLOON",
         telegramButton: "Ir para o Telegram (RU)",
         telegramButton2: "Ir para o Telegram (EN)"
     },
@@ -1099,6 +1124,8 @@ const translations = {
         game9Button: "فتح",
         game10Title: "Football X",
         game10Button: "فتح",
+	game11Button: "فتح",
+        game11Title: "BALLOON",
         telegramButton: "اذهب إلى Telegram (RU)",
         telegramButton2: "اذهب إلى Telegram (EN)"
     }
@@ -1143,6 +1170,9 @@ function changeLanguage(lang) {
         
         document.getElementById('game10-title').innerText = translations[lang].game10Title;
         document.getElementById('game10-button').innerText = translations[lang].game10Button;
+	
+	document.getElementById('game11-title').innerText = translations[lang].game11Title;
+        document.getElementById('game11-button').innerText = translations[lang].game11Button;
         
 
         // Обновляем текст для кнопок Telegram
@@ -1517,6 +1547,10 @@ function openGame(game) {
         minesSpibe: {
             ios: 'minesspribe1/index.html',
             other: 'minesspribe1/index.html'
+        },
+        BALLOON: {
+            ios: 'ball1/index.html',
+            other: 'ball1/index.html'
         }
     };
             var url = isIOS ? links[game].ios : links[game].other;
